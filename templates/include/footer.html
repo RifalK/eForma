@@ -1,0 +1,93 @@
+{% load static %}
+
+<div class="max-w-100% mx-auto">
+
+	<footer class="p-4 bg-indigo shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<span class="text-sm text-gray-500 sm:text-center dark:text-gray-600 max-w-80% mx-auto">© 2024 <a href="https://eForm.com" class="hover:underline" target="_blank">eForm™</a>. All Rights Reserved | Deseigned by eForm™.
+    </span>
+		<!--<ul class="flex flex-wrap items-center mt-3 sm:mt-0">
+			<li>
+				<a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Acceuil</a>
+			</li>
+			<li>
+				<a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Creer un Post</a>
+			</li>
+			<li>
+				<a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Contact</a>
+			</li>
+			<li>
+				<a href="#" class="text-sm text-gray-500 hover:underline dark:text-gray-400">Licensing</a>
+			</li>
+		</ul>
+        <nav class="nav nav-fill mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="https://facebook.com/groups/293443413066248" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://twitter.com/@Amarach77658214" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://linkedin.com/in/brain-tech-5054a2294"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://wa.me/2250702555813"><i class="fab fa-whatsapp"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-rss"></i></a>
+            </li>-->
+        </nav>
+	</footer>
+</div>
+
+<script>
+    function selected() {
+        var targeted = event.target;
+        var clicked = targeted.parentElement;
+
+        var child = clicked.children;
+        console.log(child);
+
+        for (let i = 0; i < child.length; i++) {
+            if (child[i].classList.contains("text-white")) {
+                console.log(child[i]);
+                child[i].classList.remove("text-white", "bg-indigo-600");
+                child[i].classList.add(
+                    "text-gray-600",
+                    "bg-gray-50",
+                    "border",
+                    "border-white"
+                );
+            }
+        }
+
+        targeted.classList.remove(
+            "text-gray-600",
+            "bg-gray-50",
+            "border",
+            "border-white"
+        );
+        targeted.classList.add("text-white", "bg-indigo-600");
+    }
+
+    function selectNew() {
+        var newL = document.getElementById("list");
+        newL.classList.toggle("hidden");
+
+        document.getElementById("ArrowSVG").classList.toggle("rotate-180");
+    }
+
+    function selectedSmall() {
+        var text = event.target.innerText;
+        var newL = document.getElementById("list");
+        var newText = document.getElementById("textClicked");
+        newL.classList.add("hidden");
+        document.getElementById("ArrowSVG").classList.toggle("rotate-180");
+        newText.innerText = text;
+
+        document.getElementById("s1").classList.remove("hidden");
+    }
+</script>

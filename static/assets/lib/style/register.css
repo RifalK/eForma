@@ -1,0 +1,54 @@
+:root{
+    --color-first:#1ec36dd9;
+    --color-second:#f0f0f0;
+    --color-white:#fff;
+    --color-success:#2ecc71;
+    --color-error:#e74c3c;
+}
+.col-md-12{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.col-md-12 i{
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    visibility: hidden;
+}
+.col-md-12 small{
+    position: absolute;
+    bottom: 1;
+    left: 1;
+    visibility: hidden;
+}
+.form-register button{
+    background: var(--color-first);
+    border: 2px solid var(--color-first);
+    color: var(--color-white);
+    display: block;
+    font-family: inherit;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+.col-md-12.success input{
+    border-color: var(--color-success);
+}
+.col-md-12.error input{
+    border-color: var(--color-error);
+}
+.col-md-12.success i.fa-check-circle{
+    color: var(--color-success);
+    visibility: visible;
+}
+.col-md-12.error i.fa-exclamation{
+    color: var(--color-error);
+    visibility: visible;
+}
+.col-md-12.error small{
+    color: var(--color-error);
+    visibility: visible;
+}
