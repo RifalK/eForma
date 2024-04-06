@@ -12,7 +12,6 @@ from django.core.mail import EmailMessage
 from django.core.mail import send_mail
 from django.conf import settings
 #from django.conf import settings
-from django.contrib.auth.decorators import login_required
 
 
 
@@ -42,13 +41,13 @@ def loginView(request):
 	    return redirect('shop:logform')
 
 
-@login_required
+
 def galery(request):
      
 	return render(request, 'contact-us/galery.html')
 
 
-@login_required
+
 def contact_form(request):
      
 	return render(request, 'contact-us/contact.html')
@@ -86,7 +85,8 @@ def panier(request, *args, **kwargs):
     return render(request, 'shop/panier.html', context)
 
 
-@login_required
+
+
 def commande(request, *args, **kwargs):
     """ Commande """
 
@@ -105,7 +105,6 @@ def commande(request, *args, **kwargs):
 
 
 
-@login_required
 def update_article(request, *args, **kwargs):
 
     data = json.loads(request.body)
@@ -140,7 +139,6 @@ def update_article(request, *args, **kwargs):
 
 
 
-@login_required
 def traitementCommande(request, *args, **kwargs):
     """ traitement,  validation de la com;ande  et verification de l'integrite des donnees(detection de fraude)"""
 
